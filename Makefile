@@ -6,7 +6,7 @@ QEMU=qemu-system-riscv32
 # Compiler and flags
 CC=clang
 OBJCOPY=llvm-objcopy
-CFLAGS=-std=c11 -O2 -g3 -Wall -Wextra --target=riscv32 -ffreestanding -nostdlib -I include
+CFLAGS=-std=c11 -fuse-ld=lld -O2 -g3 -Wall -Wextra --target=riscv32 -ffreestanding -nostdlib -I include
 
 # Source folders
 KERNEL_SRC=kernel
